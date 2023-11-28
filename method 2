@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Marks {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter marks for three units:");
+        System.out.print("Java Programming: ");
+        int javaProg = scanner.nextInt();
+        System.out.print("Networking: ");
+        int networking = scanner.nextInt();
+        System.out.print("Maths: ");
+        int maths = scanner.nextInt();
+
+        findAverage(javaProg, networking, maths);
+    }
+
+    public static void findAverage(int javaProg, int networking, int maths) {
+        int total = javaProg + networking + maths;
+        double average = total / 3.0;
+
+        System.out.println("\nMarks for Java Programming is: " + javaProg);
+        System.out.println("Marks for Networking is: " + networking);
+        System.out.println("Marks for Maths is: " + maths);
+        System.out.println("The average is: " + average);
+    }
+}
